@@ -1,19 +1,27 @@
 version: '3'
+
 services:
   # Rails application container
   web:
     build: .
+    command: ["rails", "server", "-b", "0.0.0.0"]
     ports:
       - "3000:3000"
     volumes:
       - .:/app
     depends_on:
       - db
-  # PostgreSQL container using an official image
+    environment:
+      POSTGRES_USER: level_up_in_life
+      POSTGRES_PASSWORD: gametime
+      POSTGRES_DB: level_up_in_life_development  # Use your development database name here
+
+  # PostgreSQL database container
   db:
     image: postgres:latest
     environment:
-    environment:
       POSTGRES_USER: level_up_in_life
-      POSTGRES_PASSWORD: thegame
-      POSTGRES_DB: level_up_in_life
+      POSTGRES_PASSWORD: gametime
+      POSTGRES_DB: level_up_in_life_development  # Use your development database name here
+    ports:
+      - "5432:5432"
