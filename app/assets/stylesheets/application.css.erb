@@ -75,6 +75,7 @@
   font-weight: bold;
 }
 
+.devise_form .form_container .field input[type="text"],
 .devise_form .form_container .field input[type="email"],
 .devise_form .form_container .field input[type="password"] {
   width: 100%;
@@ -86,17 +87,20 @@
   transition: border-color 0.3s ease;
 }
 
+.devise_form .form_container .field input[type="text"]:focus,
 .devise_form .form_container .field input[type="email"]:focus,
 .devise_form .form_container .field input[type="password"]:focus {
   outline: none;
   border-color: #007bff;
 }
 
+.devise_form .form_container .field input[type="text"]::placeholder,
 .devise_form .form_container .field input[type="email"]::placeholder,
 .devise_form .form_container .field input[type="password"]::placeholder {
   color: #888;
 }
 
+.devise_form .form_container .field input[type="text"],
 .devise_form .form_container .field.error input[type="email"],
 .devise_form .form_container .field.error input[type="password"] {
   border-color: #ff0000; 
@@ -154,11 +158,11 @@
   position: absolute;
   left: 0;
   top: 5px;
-  width: 20px; /* Size of the custom checkbox */
-  height: 20px; /* Size of the custom checkbox */
-  border: 2px solid white; /* Border color */
+  width: 20px;
+  height: 20px;
+  border: 2px solid white; 
   background-color: transparent;
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 4px;
 }
 
 .styled-checkbox:checked + .styled-label:before {
