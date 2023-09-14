@@ -1,7 +1,14 @@
 .backdrop{
+  height: 100vh;
+  margin: 0; /* To remove default margin */
+  padding: 0; /* To remove default padding */
   background-image: url(<%= asset_path 'background.png' %>);
   background-position: center center; 
-  background-size: cover; 
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Styling for Notice */
@@ -11,7 +18,7 @@
   font-size: 25px;
   background-color: rgba(10, 10, 10, 0.5); 
   border-radius: 10px; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
   color: white;
   padding: 10px;
   margin: 10px 0;
@@ -52,7 +59,7 @@
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
 .signup_btn:hover {
@@ -72,7 +79,7 @@
 .form_container {
   background-color: rgba(10, 10, 10, 0.5); 
   border-radius: 10px; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
   padding: 80px
 }
 
@@ -138,7 +145,7 @@
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
 .devise_form .form_container .actions input[type="submit"].signup_btn:hover {
@@ -183,3 +190,39 @@
   border-color: #ffc107;
 }
 
+.profile-container {
+  width: 97%;
+  height: 97%;
+  display: flex;
+  flex-direction: row;
+}
+
+.quest-frame{
+  background-color: rgba(10, 10, 10, 0.5); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  padding: 80px;
+  margin: 7px;
+  width: 80%;
+}
+
+.profile-frame {
+  background-color: rgba(10, 10, 10, 0.5); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  padding: 80px;
+  margin: 7px;
+}
+
+.name-container {
+  color: white;
+  text-align: center;
+}
+
+.stats-frame {
+  background-color: rgba(10, 10, 10, 0.5); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  padding: 80px;
+  margin: 7px;
+}
