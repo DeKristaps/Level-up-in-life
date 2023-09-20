@@ -1,0 +1,241 @@
+.backdrop{
+  height: 100vh;
+  margin: 0; /* To remove default margin */
+  padding: 0; /* To remove default padding */
+  background-image: url(<%= asset_path 'background.png' %>);
+  background-position: center center; 
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Styling for Notice */
+.notice-altert{
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  font-size: 25px;
+  background-color: rgba(10, 10, 10, 0.5); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.home_container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.title_container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup_btn {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.signup_btn:hover {
+  background-color: #ffc107;
+  color: #8a2be2;
+}
+
+.devise_form {
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+  font-size: 30px;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.form_container {
+  background-color: rgba(10, 10, 10, 0.5); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  padding: 80px
+}
+
+.form-text {
+  text-align: center;
+}
+
+.devise_form .form_container .field {
+  margin-bottom: 20px; 
+}
+
+.devise_form .form_container .field label {
+  font-weight: bold;
+}
+
+.devise_form .form_container .field input[type="text"],
+.devise_form .form_container .field input[type="email"],
+.devise_form .form_container .field input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.devise_form .form_container .field input[type="text"]:focus,
+.devise_form .form_container .field input[type="email"]:focus,
+.devise_form .form_container .field input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.devise_form .form_container .field input[type="text"]::placeholder,
+.devise_form .form_container .field input[type="email"]::placeholder,
+.devise_form .form_container .field input[type="password"]::placeholder {
+  color: #888;
+}
+
+.devise_form .form_container .field input[type="text"],
+.devise_form .form_container .field.error input[type="email"],
+.devise_form .form_container .field.error input[type="password"] {
+  border-color: #ff0000; 
+}
+
+.devise_form .form_container .field .error_message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.devise_form .form_container .actions input[type="submit"].signup_btn {
+  margin-top: 15px;
+  width: 100%; /* Set the width to 100% */
+  padding: 15px 0; /* Adjust padding as needed */
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.devise_form .form_container .actions input[type="submit"].signup_btn:hover {
+  background-color: #ffc107;
+  color: #8a2be2;
+}
+
+.actions {
+  text-align: center;
+  width: 100%
+}
+
+.link-path {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.styled-checkbox {
+  display: none;
+}
+
+.styled-label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.styled-label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white; 
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.styled-checkbox:checked + .styled-label:before {
+  background-color: #ffc107; 
+  border-color: #ffc107;
+}
+
+.profile-container {
+  width: 97%;
+  height: 97%;
+  display: flex;
+  flex-direction: row;
+}
+
+.quest-frame{
+  background-color: rgba(10, 10, 10, 0.5); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  padding: 80px;
+  margin: 7px;
+  width: 80%;
+}
+
+.profile-frame {
+  background-color: rgba(10, 10, 10, 0.5); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  padding: 80px;
+  margin: 7px;
+}
+
+.name-container {
+  color: white;
+  text-align: center;
+}
+
+.stats-frame {
+  background-color: rgba(10, 10, 10, 0.5); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  margin: 7px;
+}
+
+.stats-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.stat-window {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

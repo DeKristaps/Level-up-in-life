@@ -11,7 +11,8 @@ WORKDIR /app
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
-    nodejs
+    nodejs \
+    libpq-dev   # Install PostgreSQL development libraries
 
 # Copy the Gemfile and Gemfile.lock into the container
 COPY Gemfile Gemfile.lock ./
