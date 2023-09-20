@@ -2,8 +2,9 @@
 FROM ruby:3.0.0
 
 # Set environment variables for Rails
-ENV RAILS_ENV=development \
-    RAILS_SERVE_STATIC_FILES=true
+ENV RAILS_ENV production
+ENV RAILS_SERVE_STATIC_FILES true
+ENV RAILS_LOG_TO_STDOUT true
 
 # Set the working directory in the container
 WORKDIR /app

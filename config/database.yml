@@ -12,3 +12,7 @@ development:
 test:
   <<: *default
   database: level_up_in_life_test
+
+production:
+  <<: *default
+  database: level_up_in_life_prod
