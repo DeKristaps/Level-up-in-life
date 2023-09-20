@@ -1,3 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: level_up_in_life
+  password: gametime
+  host: db
+
+development:
+  <<: *default
+  database: level_up_in_life_development
+
+test:
+  <<: *default
+  database: level_up_in_life_test
+
 production:
-  url: <%= ENV['DATABASE_URL'] %>
-  
+  <<: *default
+  database: d43uquf54mgkn5
+  username: pqhrleigltahpb
+  password: c480dc856bbbf7ef47aa73164ba84c4cbc166c3cc423f2aed0449bce6a9e1b89
+  host: ec2-52-3-81-13.compute-1.amazonaws.com
