@@ -1,18 +1,3 @@
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  username: mkqeelnwagtmxy
-  password: 6cf47ee53348e38da907c5da3be038547cc9af96d65d384dbfd372eecc97ebb3
-  host: ec2-52-3-81-13.compute-1.amazonaws.com
-
-development:
-  <<: *default
-  database: level_up_in_life_development
-
-test:
-  <<: *default
-  database: level_up_in_life_test
-
 production:
   url: <%= ENV['DATABASE_URL'] %>
   
