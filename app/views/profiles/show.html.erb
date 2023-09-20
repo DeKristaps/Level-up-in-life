@@ -12,7 +12,14 @@
     <div>
     </div>
     <div class='stats-frame'>
-      Stats Placeholder
+      <div class='stats-container'>
+        <% @stats.each do |stat, value| %>
+          <div class='stat-window'>
+            <div><%= stat.capitalize %></div>
+            <div><%= value %></div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
