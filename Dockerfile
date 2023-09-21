@@ -1,31 +1,33 @@
 # Use an official Ruby runtime as the base image
 FROM ruby:3.0.0
 
-# Set environment variables for Rails
-ENV RAILS_ENV production
-ENV RAILS_SERVE_STATIC_FILES true
-ENV RAILS_LOG_TO_STDOUT true
+# Set environment variables
+ENV RAILS_ENV=production \
+    RAILS_LOG_TO_STDOUT=1
+
+# Install system dependencies
+RUN apt-get update -qq && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    nodejs
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Install dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    nodejs \
-    libpq-dev   # Install PostgreSQL development libraries
-
-# Copy the Gemfile and Gemfile.lock into the container
+# Copy the Gemfile and Gemfile.lock to the container
 COPY Gemfile Gemfile.lock ./
 
-# Install gems
-RUN gem install bundler && bundle install --jobs 20 --retry 5
+# Install Ruby gems
+RUN bundle install --without development test
 
-# Install node.js for JavaScript assets
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get install -y nodejs
+# Copy the rest of your application code to the container
+COPY . .
 
-# Expose a port (e.g., 3000) if your Rails app uses a different one
+# Precompile assets
+RUN bundle exec rails assets:precompile
+
+# Expose port 3000 (the default Rails server port)
 EXPOSE 3000
 
-# Start the Rails application with development options
-# CMD ["rails", "server", "-b", "0.0.0.0"]
+# Start the Rails application
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
