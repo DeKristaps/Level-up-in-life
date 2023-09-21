@@ -28,4 +28,4 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get install -
 EXPOSE 3000
 
 # Start the Rails application with development options
-CMD ["rails", "server", "-b", "0.0.0.0", "--pid", "/tmp/server.pid"]
+# CMD ["rails", "server", "-b", "0.0.0.0"]

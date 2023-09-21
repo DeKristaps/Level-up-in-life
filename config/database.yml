@@ -2,12 +2,12 @@ default: &default
   adapter: postgresql
   encoding: unicode
   username: level_up_in_life
-  password: gametime
+  password: STMt62vzBEWXwJOEGUWqkVlX2HnlTEBA
   host: db
 
 production:
   <<: *default
-  database: level_up_in_life_production
+  url: <%= ENV['DATABASE_URL'] %>
 
 development:
   <<: *default
