@@ -14,7 +14,7 @@ services:
     environment:
       POSTGRES_USER: level_up_in_life
       POSTGRES_PASSWORD: gametime
-      POSTGRES_DB: level_up_in_life_development  # Use your development database name here
+      POSTGRES_DB: level_up_in_life_production
 
   # PostgreSQL database container
   db:
@@ -22,6 +22,6 @@ services:
     environment:
       POSTGRES_USER: level_up_in_life
       POSTGRES_PASSWORD: gametime
-      POSTGRES_DB: level_up_in_life_development  # Use your development database name here
+      POSTGRES_DB: level_up_in_life_production
     ports:
       - "5432:5432"
