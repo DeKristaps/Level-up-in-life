@@ -15,3 +15,9 @@ user2 = User.new(email: 'test@example.com', nickname: 'Testy Testerson')
 user2.password = 'admin123'
 user2.password_confirmation = 'admin123'
 user2.save
+
+quest = Quest.new(title: 'Do the dishes', description: 'You have to wash all the dishes in the sink', xp_for_stat: 'constitution', xp_given: 15)
+quest2 = Quest.new(title: 'Worckout', description: 'Just lift something hevy for about 20 min', xp_for_stat: 'strength', xp_given: 15)
+
+quest.save
+quest2.save
