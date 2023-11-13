@@ -1,5 +1,11 @@
-<div>
-  <%= @quests.each do |quest|%>
-    <li><%= quest.title %></li>
-  <%end%>
+<div class="backdrop">
+  <div class="home_container">
+    <div class="quest-grid">
+      <%= render partial: 'quest_card', collection: @quests, as: :quest %>
+    </div>
+
+    <div class="pagination-container">
+      <%= paginate @quests %>
+    </div>
+  </div>
 </div>

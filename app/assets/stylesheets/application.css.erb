@@ -1,9 +1,9 @@
-.backdrop{
+.backdrop {
   height: 100vh;
-  margin: 0; /* To remove default margin */
-  padding: 0; /* To remove default padding */
+  margin: 0;
+  padding: 0;
   background-image: url(<%= asset_path 'background.png' %>);
-  background-position: center center; 
+  background-position: center center;
   overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
@@ -238,4 +238,40 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.quest-card {
+  background-color: rgba(10, 10, 10, 0.5); /* Adjusted background color */
+  border: 1px solid white; /* White border */
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
+  user-select: none;
+}
+
+.quest-card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  color: white; /* White text */
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-xp,
+.card-xp-for-stat {
+  font-size: 14px;
+  color: #888; /* Lighter gray for additional text */
 }
