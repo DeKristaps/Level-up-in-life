@@ -4,4 +4,8 @@ class QuestsController < ApplicationController
   def index
     @quests = Quest.page(params[:page]).per(6)
   end
+  
+  def show
+    @quest = Quest.find(params[:id])
+  end
 end

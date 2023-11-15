@@ -257,7 +257,7 @@
 }
 
 .card-content {
-  color: white; /* White text */
+  color: white;
 }
 
 .card-title {
@@ -274,4 +274,96 @@
 .card-xp-for-stat {
   font-size: 14px;
   color: #888; /* Lighter gray for additional text */
+}
+
+.quest-card {
+  background-color: rgba(10, 10, 10, 0.5); /* Adjusted background color */
+  border: 1px solid white; /* White border */
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
+  user-select: none;
+}
+
+.quest-card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  color: white;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-xp,
+.card-xp-for-stat {
+  font-size: 14px;
+  color: #888; /* Lighter gray for additional text */
+}
+
+.quest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 20px; /* Adjust the gap between quest cards as needed */
+}
+
+.quest-card a {
+  text-decoration: none;
+  color: inherit; /* Inherit the color from the parent (.quest-card) */
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.quest-card-new {
+  max-width: 400px;
+  padding: 20px;
+  background-color: rgba(10, 10, 10, 0.5); /* Adjusted background color */
+  border: 1px solid white; /* White border */
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  color: white;
+}
+
+
+.card-content-new {
+  text-align: center;
+}
+
+.accept-button-new {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.accept-button-new:hover {
+  background-color: #ffc107;
+  color: #8a2be2;
 }
