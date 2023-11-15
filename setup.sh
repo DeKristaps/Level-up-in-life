@@ -17,6 +17,6 @@ docker-compose up -d
 
 # Create the database and run migrations
 echo "Creating the database and running migrations..."
-docker-compose exec web rails db:create db:migrate
+docker-compose exec web rails db:create db:migrate db:seed
 
 echo "Setup complete! Your Rails application is running at http://localhost:3000."
