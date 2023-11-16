@@ -1,0 +1,13 @@
+<%= render 'shared/navigation' %>
+<div class="centered-container">
+  <div class="quest-card-new">
+    <div class="card-content-new">
+      <h3 class="card-title"><%= @quest.title %></h3>
+      <p class="card-description"><%= @quest.description %></p>
+      <p class="card-xp">XP Given: <%= @quest.xp_given %></p>
+      <p class="card-xp-for-stat">XP For Stat: <%= @quest.xp_for_stat %></p>
+    </div>
+  </div>
+
+  <%= button_to "Accept Quest", quest_path(@quest), method: :post, class: "accept-button-new" %>
+</div>

@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <ul>
+    <li class="<%= 'active' if current_page?(profiles_show_path) %>">
+      <%= link_to 'Home', profiles_show_path %>
+    </li>
+    <li class="<%= 'active' if current_page?(quests_path) %>">
+      <%= link_to 'Quests', quests_path %>
+    </li>
+  </ul>
+</nav>
