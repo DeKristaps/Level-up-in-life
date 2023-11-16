@@ -1,0 +1,30 @@
+.navbar {
+  background-color: rgba(10, 10, 10, 0.5); /* Adjusted background color */
+  overflow: hidden;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover,
+.navbar li.active a {
+  background-color: #ffc107; /* Hover/active color */
+  color: #8a2be2;
+}
